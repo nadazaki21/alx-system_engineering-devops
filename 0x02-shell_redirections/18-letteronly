@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo grep "[[:alpha:]][0-9A-Za-z]" /etc/ssh/sshd_config
+grep "[[:alpha:]][0-9A-Za-z]" /etc/ssh/sshd_config
