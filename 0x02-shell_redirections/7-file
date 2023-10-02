@@ -1,1 +1,2 @@
 #!/bin/bash
+{fn='\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)'; fc='Best School\n'; echo -e $fc > $fn ;} 
