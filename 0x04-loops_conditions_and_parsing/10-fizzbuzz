@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Bash script that displays numbers from 1 to 100.
+
 limit=100
 start=1
 for((i=start; i < limit ; i++)); do
