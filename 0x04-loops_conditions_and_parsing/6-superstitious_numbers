@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 iterations=20
 i=1
 

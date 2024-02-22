@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 awk -F '[ ]' '{ counts[$1 " " $9]++ } END { for (key in counts) print counts[key], key }' apache-access.log | sort -nr
 
 #wrong
