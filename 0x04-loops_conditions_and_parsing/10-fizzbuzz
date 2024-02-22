@@ -3,7 +3,7 @@
 
 limit=100
 start=1
-for((i=start; i < limit ; i++)); do
+for((i=start; i <= limit ; i++)); do
     if (( i % 3 == 0 )) && (( i % 5 == 0 )); then
         echo "FizzBuzz"
     elif (( i % 3 == 0 )); then
