@@ -1,0 +1,5 @@
+#!/bin/bash
+files=$(ls -1)
+for i in $files; do
+    echo "$i"  | cut -d '-' -f2
+done

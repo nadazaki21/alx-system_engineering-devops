@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Specify the number of iterations
+num_iterations=10
+
+# Loop through the specified number of iterations
+for ((i = 0; i < num_iterations; i++)); do
+    # Display "Best School"
+    echo "Best School"
+done

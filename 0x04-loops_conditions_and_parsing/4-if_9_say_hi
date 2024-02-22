@@ -1,0 +1,14 @@
+#!/bin/bash
+iterations=10
+i=0
+
+while [ "$i" -ne "$iterations" ]
+do
+    if [ "$i" -eq "8" ]; then
+        echo "Best School"
+        echo "Hi"
+    else
+        echo "Best School" 
+    fi
+    ((i++))
+done

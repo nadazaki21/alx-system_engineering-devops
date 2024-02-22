@@ -1,0 +1,7 @@
+#!/bin/bash
+awk -F '[ ]' '{ counts[$1 " " $9]++ } END { for (key in counts) print counts[key], key }' apache-access.log | sort -nr
+
+#wrong
+#awk -F '[ ]' '{ print $1, $9 }' apache-access.log |  uniq -c
+#awk produces the output line by a line, each line will be taken as a different input
+#also , uniq counts the number of duplicate lines which are consecutive , not separate

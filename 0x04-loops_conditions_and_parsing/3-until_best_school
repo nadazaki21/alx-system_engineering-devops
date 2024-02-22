@@ -1,0 +1,10 @@
+#!/bin/bash
+
+iterations=10
+i=0
+
+until [ "$i" -eq "$iterations" ]
+do
+    echo "Best School"
+    ((i++)) 
+done
