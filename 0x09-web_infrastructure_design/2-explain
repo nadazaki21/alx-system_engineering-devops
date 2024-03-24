@@ -1,0 +1,24 @@
+Firewalls:
+ added in order to manage incoming traffic to the 3 servers and provide security
+
+1 SSL certificate for load balancer:
+in order to acheive secure transmission between the 3 servers and the users using the HTTPs protocol
+
+Monitoring Client:
+to order the view and monitor the health and the usage of the 3 severs and provide alerts in specific cases
+
+
+How do Monitoring tools collect the data?
+Some monitoring tools use lightweight software agents installed on each monitored system. These agents continuously collect performance metrics, logs, and other relevant data from the local system.
+Agents may gather information such as CPU usage, memory utilization, disk I/O, network traffic, application performance metrics, and log entries.
+
+Explain what to do if you want to monitor your web server QPS:
+To monitor your web server's QPS (Queries Per Second), you'll need to set up monitoring tools or systems that can collect and analyze relevant metrics from your web server.
+you'll need to:
+select the tools
+installs agents if needed 
+configure data collection
+monitor QPS metrics
+Set alerts
+
+https://imgur.com/a/BlF95rU
