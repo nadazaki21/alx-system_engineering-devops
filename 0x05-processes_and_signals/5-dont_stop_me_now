@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # 4-to_infinity_and_beyond
-id=$(pgrep 4-to_infinity_and_beyond)
-kill "${id}"
+id=$(pgrep -f 4-to_infinity_and_beyond)
+echo "${id}"
+#kill "${id}"
