@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
+# shows the currently runnung proccesses
 ps -u
-
-
