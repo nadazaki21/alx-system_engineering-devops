@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# 4-to_infinity_and_beyond
 id=$(pgrep 4-to_infinity_and_beyond)
 kill "${id}"
