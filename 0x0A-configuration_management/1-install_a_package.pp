@@ -12,3 +12,7 @@ package {'flask':
         name     => 'flask',
         provider => 'pip3',
 }
+
+
+# or you can intsall several packages in one command
+# pip3 install package=version package= version
