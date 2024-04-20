@@ -5,5 +5,5 @@ file { 'config_file':
         
         path    => '/etc/ssh/ssh_config',
         ensure  => 'file',
-        content =>  file('0x0B-ssh/config_file'),
+        content =>  file('./config_file'),
 }
