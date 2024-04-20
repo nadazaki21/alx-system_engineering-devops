@@ -5,5 +5,5 @@ file { 'config_file':
         
         path    => '/etc/ssh/ssh_config',
         ensure  => 'file',
-        content =>  file('config_file'),
+        source  => 'puppet:///files/config_file',
 }
