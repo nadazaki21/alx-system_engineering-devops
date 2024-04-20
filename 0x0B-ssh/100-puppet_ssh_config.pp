@@ -17,3 +17,9 @@ file_line { 'config_file_key':
 }
 
 
+file_line { 'remove_pass':
+      path              => '/etc/ssh/ssh_config',
+      match             => '   PasswordAuthentication no',
+      match_for_absence => true,
+    }
+
