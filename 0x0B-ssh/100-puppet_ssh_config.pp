@@ -5,5 +5,5 @@ file { 'config_file':
         
         path    => '/etc/ssh/ssh_config',
         ensure  => 'file',
-        source  => 'puppet:///files/config_file',
+        content  => file('/home/nada-zaki/alx/alx-system_engineering-devops/0x0B-ssh/files/config_file'),
 }
