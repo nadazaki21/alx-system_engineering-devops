@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# script that installs nginx and adds a file that prints 'Hello World!' for testing
-apt-get update -y
-apt-get upgrade -y 
-apt install nginx -y
+# Script that installs Nginx server
+apt-get -y update
+apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
-nginx -s reload
+service nginx start
