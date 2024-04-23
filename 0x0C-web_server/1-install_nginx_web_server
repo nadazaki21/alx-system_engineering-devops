@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # script that installs nginx and adds a file that prints 'Hello World!' for testing
-apt install nginx -y
+apt-get install nginx -y
 cp hello_world.html /var/www/html/index.nginx-debian.html
 nginx -s reload
