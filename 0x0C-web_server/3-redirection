@@ -2,5 +2,9 @@
 # script that adds a new location to default file
 REDIRECT="location /redirect_me {\nreturn 301 permanent;\n}"
 
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
 sed -i "48i\ $REDIRECT" /etc/nginx/sites-available/default
 service nginx start
