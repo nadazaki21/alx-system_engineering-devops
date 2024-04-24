@@ -12,10 +12,9 @@ file { 'default-page':
     content => 'Hello World!',
 }
 
-file_line { 'redirection':
-    path  => '/etc/nginx/sites-available/default',
-    line  => ' location /redirect_me {\nreturn 301 permanent;\n    }',
-    after => '^server_name',
+
+exec { 'redirect':
+    command => '/usr/bin/sed -i "48i\   location /redirect_me {\nreturn 301 permanent;\n    }" /etc/nginx/sites-available/default'
 }
 
 
