@@ -17,3 +17,10 @@ file_line { 'redirection':
     line  => ' location /redirect_me {\nreturn 301 permanent;\n    }',
     after => '^server_name',
 }
+
+
+exec {'start':
+  command  => 'sudo service nginx start',
+  provider => shell,
+  path     => '/usr/bin:/usr/sbin:/bin',
+}
