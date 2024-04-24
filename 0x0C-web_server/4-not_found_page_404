@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+# scripts that Configure Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
+NOT_FOUND="error_page 404 /404.html;\nlocation = /404.html {\nroot /usr/share/nginx/html;\ninternal;\n}"
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
+sed -i "47i\ $NOT_FOUND" /etc/nginx/sites-available/default
+service nginx start
+
+    

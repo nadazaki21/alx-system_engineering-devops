@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # script that adds a new location to default file
-REDIRECT="location /redirect_me {\nreturn 301 permanent;\n}"
+REDIRECT="  location /redirect_me {\nreturn 301 permanent;\n    }"
 
 apt-get -y update
 apt-get -y install nginx
