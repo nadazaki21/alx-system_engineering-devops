@@ -19,8 +19,7 @@ file_line { 'redirection':
 }
 
 
-exec {'start':
-  command  => 'sudo service nginx start',
-  provider => shell,
-  path     => '/usr/bin:/usr/sbin:/bin',
+exec {'start_server':
+
+command => '/usr/bin/sudo /usr/sbin/service nginx start',
 }
