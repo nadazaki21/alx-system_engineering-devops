@@ -5,5 +5,5 @@ apt update
 apt install nginx -y
 export HOSTNAME=$HOSTNAME
 sed -i '59i\add_header X-Served-By $HOSTNAME always;' /etc/nginx/nginx.conf 
-systemctl reload nginx
+/etc/init.d/nginx reload
 # sudo service nginx start
