@@ -2,7 +2,7 @@
 
 exec { 'update':
 
-    command => '/usr/bin/apt update',
+    command => '/usr/bin/sudo /usr/bin/apt update',
 }
 
 
