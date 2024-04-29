@@ -6,14 +6,15 @@ sudo add-apt-repository ppa:vbernat/haproxy-2.0 -y
 sudo apt-get install haproxy=2.0.\* -y 
 # append   
 
-echo 'frontend myfrontend
-        bind *:80
-        default_backend myservers
-
-backend myservers
-        balance roundrobin
-        server server1 54.164.243.131:80 check 
-        server server2 54.237.209.252:80 check' >>  /etc/haproxy/haproxy.cfg
+sudo sed -i '$ a\
+frontend myfrontend\n\
+    bind *:80\n\
+    default_backend myservers\n\
+\n\
+backend myservers\n\
+    balance roundrobin\n\
+    server server1 54.164.243.131:80 check\n\
+    server server2 54.237.209.252:80 check' /etc/haproxy/haproxy.cfg
 # frontend myfrontend
 #         bind 127.0.0.1:80
 #         default_backend myservers
@@ -24,5 +25,11 @@ backend myservers
 #         server server2 54.237.209.252:80 check
 
 
-echo 'ENABLED=1' >>  /etc/default/haproxy
-sudo systemctl restart haproxy
+sudo sed -i '$ a\ENABLED=1' /etc/default/haproxy
+sudo chmod +x /etc/init.d/haproxy
+
+
+#sudo systemctl restart haproxy
+
+sudo service haproxy restart
+
