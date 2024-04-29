@@ -21,7 +21,7 @@ exec { 'insert line':
 
 exec { 'reload_nginx':
 
-    command => '/etc/init.d/nginx reload',
+    command => '/usr/sbin/service nginx start',
     environment => ['HOSTNAME=$HOSTNAME'],
 }
 
