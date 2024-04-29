@@ -6,10 +6,10 @@ exec { 'update':
 }
 
 
-package { 'install_nginx':
-
+package { 'nginx':
     name     => 'nginx',
     provider => 'apt',
+    ensure   => 'installed',
 }
 
 
