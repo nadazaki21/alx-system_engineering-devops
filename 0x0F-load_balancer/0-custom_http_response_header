@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# configuration script for web02 server
+
+apt update
+apt install nginx -y
+export HOSTNAME=$HOSTNAME
+sed -i '59i\add_header X-Served-By $HOSTNAME always;' /etc/nginx/nginx.conf 
+systemctl 
+/etc/init.d/nginx start
+# sudo service nginx start
