@@ -15,7 +15,7 @@ package { 'nginx':
 
 exec { 'insert line':
 
-    command => '/usr/bin/sed -i \'57i\add_header X-Served-By $HOSTNAME always;\' /etc/nginx/nginx.conf ',
+    command => '/usr/bin/sed -i \'65i\add_header X-Served-By $HOSTNAME always;\' /etc/nginx/sites-available/default',
     environment => ['HOSTNAME=$HOSTNAME'],
 }
 
