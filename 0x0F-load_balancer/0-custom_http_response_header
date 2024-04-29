@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # configuration script for web02 server
 
-sudo apt update
+sudo apt update -y
 sudo apt install nginx -y
 sudo export HOSTNAME=$HOSTNAME
 sudo sed -i '57i\add_header X-Served-By $HOSTNAME always;' /etc/nginx/nginx.conf 
