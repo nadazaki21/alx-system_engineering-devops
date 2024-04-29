@@ -2,7 +2,7 @@
 
 exec { 'update':
 
-    command => 'sudo apt update',
+    command => '/usr/bin/apt update',
 }
 
 
@@ -13,25 +13,15 @@ package { 'install_nginx':
 }
 
 
-exec { 'export_hostname':
-
-    command => 'export HOSTNAME=$HOSTNAME',
-}
-
-
-exec { 'update':
-
-    command => 'sudo apt update',
-}
-
-
 exec { 'insert line':
 
-    command => 'sed -i '57i\add_header X-Served-By $HOSTNAME always;' /etc/nginx/nginx.conf ',
+    command => '/usr/bin/sed -i \'57i\add_header X-Served-By $HOSTNAME always;\' /etc/nginx/nginx.conf ',
+    environment => ['HOSTNAME=$HOSTNAME'],
 }
 
 exec { 'reload_nginx':
 
     command => '/etc/init.d/nginx reload',
+    environment => ['HOSTNAME=$HOSTNAME'],
 }
 
