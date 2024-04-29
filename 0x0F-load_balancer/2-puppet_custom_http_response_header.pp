@@ -21,6 +21,6 @@ exec { 'insert line':
 
 exec {'start_server':
 
-command => '/usr/bin/sudo /usr/sbin/service nginx start',
+command => '/usr/bin/sudo /usr/sbin/service nginx restart',
 }
 
