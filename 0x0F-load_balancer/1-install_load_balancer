@@ -15,8 +15,8 @@ frontend haproxy_balancer
 backend webservers
     mode http
     balance roundrobin
-    server 531078-web-01 100.25.12.124:80 check
-    server 531078-web-02 54.236.45.187:80 check
+    server 530985-web-01 54.164.243.131:80 check
+    server 530985-web-02 54.237.209.252:80 check
 " > /etc/haproxy/haproxy.cfg
 
 service haproxy start
