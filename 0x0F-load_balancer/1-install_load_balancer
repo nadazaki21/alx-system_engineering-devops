@@ -13,6 +13,7 @@ frontend myfrontend
     mode http
     default_backend app
 backend app
+    mode http
     balance roundrobin
     server 530985-web-01 54.164.243.131:80 check
     server 530985-web-02 54.237.209.252:80 check" > /etc/haproxy/haproxy.cfg
