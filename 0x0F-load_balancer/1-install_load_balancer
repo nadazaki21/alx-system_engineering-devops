@@ -15,7 +15,7 @@ frontend myfrontend
 backend app
     balance roundrobin
     server 530985-web-01 54.164.243.131:80 check
-    server 530985-web-02 54.237.209.252:80 check" >> /etc/haproxy/haproxy.cfg
+    server 530985-web-02 54.237.209.252:80 check" > /etc/haproxy/haproxy.cfg
 
 sudo service haproxy start
 
