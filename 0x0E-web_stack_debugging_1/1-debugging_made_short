@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # this solution for task 1 worked except for 1 check
-sudo ln -sf /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
-sudo echo 'leh keda bas ' > /var/run/nginx.pid  /run/nginx.pid
+ln -sf /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
+echo 'leh keda bas ' > /var/run/nginx.pid  /run/nginx.pid
 sudo service nginx restart
