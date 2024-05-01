@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # scipt to make fix nginx and make it work on port 80
-sudo apt update
+sudo apt update -y
 sudo apt install nginx --fix-missing -y
 sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 service nginx restart 
