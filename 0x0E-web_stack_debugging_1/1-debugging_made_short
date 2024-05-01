@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # scipt to make fix nginx and make it work on port 80
 ln -sf /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
-echo 'leh keda bas ' | tee /var/run/nginx.pid  /run/nginx.pid
+echo 'leh keda bas ' > /var/run/nginx.pid  
+echo 'leh keda bas ' > /run/nginx.pid
 sudo service nginx restart
