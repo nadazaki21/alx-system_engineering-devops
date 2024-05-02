@@ -1,0 +1,15 @@
+global
+    ssl-dh-param-file /etc/haproxy/dhparams.pem
+
+frontend haproxy_balancer
+    bind *:80
+    mode http
+    bind *:443 ssl crt /etc/haproxy/certs/www.the-artifact.tech.pem
+    redirect scheme https if !{ ssl_fc }
+    default_backend webservers
+
+backend webservers
+    mode http
+    balance roundrobin
+    server 531078-web-01 54.164.243.131:80 check
+    server 531078-web-02 54.237.209.252:80 check

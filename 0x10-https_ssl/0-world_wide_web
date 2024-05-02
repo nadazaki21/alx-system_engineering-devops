@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+subdomains=("www" "lb-01" "web-01" "web-02")
+
