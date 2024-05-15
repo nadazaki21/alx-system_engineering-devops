@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Scipt that creates a backup
 PASS="$1"
-if [ -z $PASS ]; then
+if [ -z "$PASS" ]; then
         #echo 'no arg'
         exit
 fi
