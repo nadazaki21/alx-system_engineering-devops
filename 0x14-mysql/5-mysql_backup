@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 # Scipt that creates a backup
+PASS="$1"
+if [ -z $PASS ]; then
+        #echo 'no arg'
+        exit
+fi
 mysqldump -u root --password "$1" --all-databases > backup.sql
 sudo tar -czvf "$(date +%d-%m-%y)".tar.gz backup.sql
+
