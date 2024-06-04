@@ -6,7 +6,6 @@
 
 """
 import requests
-from json import loads, dump, dumps
 
 
 def number_of_subscribers(subreddit):
